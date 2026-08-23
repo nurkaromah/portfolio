@@ -3,7 +3,7 @@ Data Engineer & Analytics Enthusiast
 
 Welcome to my personal data portfolio repository. This repository documents a comprehensive collection of projects I have built, ranging from data infrastructure engineering (Data Engineering) and data preprocessing (Data Cleaning) to dashboard design and business insight delivery (Data Analytics).
 
-Live Portfolio Website: https://nurkaromah.github.io/portofolio/
+Live Portfolio Website: [https://nurkaromah.github.io/portofolio/](https://nurkaromah.github.io/portfolio/)
 
 ---
 

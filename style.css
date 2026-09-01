@@ -930,7 +930,7 @@ body.dark .project-tags span {
    PROJECT IMAGE
 ========================= */
 
-.project-image {
+/* .project-image {
     width: 100%;
     height: 230px;
 
@@ -954,6 +954,31 @@ body.dark .project-tags span {
 
 .project-card:hover .project-image img {
     transform: scale(1.04);
+} */
+
+/* =========================
+   PROJECT DASHBOARD IMAGE
+========================= */
+
+.project-image {
+    width: 100%;
+    background: #f1f5f9;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.01);
 }
 
 
@@ -1135,6 +1160,128 @@ body.dark .learning-icon {
 
     .project-image {
         height: 200px;
+    }
+
+}
+
+/* =========================
+   DASHBOARD PREVIEW
+========================= */
+
+.dashboard-preview {
+    cursor: zoom-in;
+}
+
+.dashboard-preview img {
+    transition: transform 0.3s ease;
+}
+
+.dashboard-preview:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   DASHBOARD LIGHTBOX
+========================= */
+
+.dashboard-modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* Gambar di dalam popup */
+
+.dashboard-modal-image {
+    max-width: 95%;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+
+    cursor: default;
+}
+
+
+/* Tombol X */
+
+.dashboard-close {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    font-size: 32px;
+
+    line-height: 40px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    z-index: 10000;
+}
+
+
+.dashboard-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+
+    transform: rotate(90deg);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .dashboard-modal {
+        padding: 15px;
+    }
+
+    .dashboard-modal-image {
+        max-width: 100%;
+        max-height: 85vh;
+    }
+
+    .dashboard-close {
+        top: 10px;
+        right: 15px;
     }
 
 }

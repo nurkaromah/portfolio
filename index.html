@@ -751,11 +751,12 @@
 
             <!-- Dashboard Image -->
 
-            <div class="project-image">
+            <div class="project-image dashboard-preview">
 
                 <img
                     src="images/dashboard-excel.png"
-                    alt="Bike Sales Dashboard created in Microsoft Excel"
+                    alt="Bike Sales Dashboard created with Microsoft Excel"
+                    onclick="openDashboard(this.src, this.alt)"
                 >
 
             </div>
@@ -802,6 +803,59 @@
         </div>
 
     </div>
+
+    <!-- PROJECT 7 - POWER BI -->
+
+<div class="project-card featured-project">
+
+<div class="project-image dashboard-preview">
+
+    <img
+        src="images/dashboard-power_BI.png"
+        alt="Data Professional Survey Dashboard created with Power BI"
+        onclick="openDashboard(this.src, this.alt)"
+    >
+
+</div>
+
+
+    <div class="project-content">
+
+        <h3>
+            Data Professional Survey Dashboard
+        </h3>
+
+        <p>
+            An interactive Power BI dashboard analyzing
+            professional survey data, including average
+            salary by job title, country distribution,
+            programming language preferences, age,
+            work-life balance, and salary satisfaction.
+        </p>
+
+
+        <div class="project-tags">
+
+            <span>Power BI</span>
+            <span>Data Visualization</span>
+            <span>Dashboard</span>
+            <span>Data Analysis</span>
+
+        </div>
+
+
+        <a
+            href="#"
+            class="project-link"
+            onclick="return false;"
+        >
+            Power BI Dashboard
+            <i class="fas fa-chart-column"></i>
+        </a>
+
+    </div>
+
+</div>
 
 </section>
 
@@ -1213,6 +1267,30 @@
 
     </footer>
 
+<!-- ================= DASHBOARD LIGHTBOX ================= -->
+
+<div
+    id="dashboard-modal"
+    class="dashboard-modal"
+    onclick="closeDashboard(event)"
+>
+
+    <button
+        class="dashboard-close"
+        onclick="closeDashboard()"
+        aria-label="Close dashboard"
+    >
+        &times;
+    </button>
+
+    <img
+        id="dashboard-modal-image"
+        class="dashboard-modal-image"
+        src=""
+        alt=""
+    >
+
+</div>
 
 
     <!-- JavaScript -->

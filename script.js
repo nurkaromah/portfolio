@@ -77,23 +77,68 @@ if (savedTheme === "dark") {
 
 }
 
+/* =========================
+   DASHBOARD LIGHTBOX
+========================= */
 
-// =========================
-// CONTACT FORM
-// =========================
+function openDashboard(imageSrc, imageAlt) {
 
-// const contactForm =
-//     document.getElementById("contact-form");
+    const modal =
+        document.getElementById("dashboard-modal");
 
-// contactForm.addEventListener("submit", function(event) {
+    const modalImage =
+        document.getElementById("dashboard-modal-image");
 
-//     event.preventDefault();
 
-//     alert(
-//         "Thank you for your message! " +
-//         "Please contact me directly via email."
-//     );
+    modalImage.src = imageSrc;
 
-//     contactForm.reset();
+    modalImage.alt = imageAlt;
 
-// });
+
+    modal.style.display = "flex";
+
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeDashboard(event) {
+
+    const modal =
+        document.getElementById("dashboard-modal");
+
+
+    // Jangan tutup ketika gambar yang diklik
+
+    if (
+        event &&
+        event.target &&
+        event.target.id === "dashboard-modal-image"
+    ) {
+        return;
+    }
+
+
+    modal.style.display = "none";
+
+
+    document.body.style.overflow = "";
+}
+
+
+/* Tutup dengan tombol ESC */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            closeDashboard();
+
+        }
+
+    }
+);
+
+
